@@ -43,15 +43,15 @@ public class AdminSection extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == addDonorBtn) {
-            new AddAssistant(); // استدعاء واجهة إضافة مساعد بالاسم النظيف
+            new AddAssistant(); 
             dispose();
         }
         if (e.getSource() == viewDonorsBtn) {
-            new ViewAssistant(); // استدعاء واجهة استعراض المساعدين بالاسم النظيف
+            new ViewAssistant(); 
             dispose();
         }
         if (e.getSource() == logoutBtn) {
-            new MainFrame(); // تسجيل الخروج والعودة للبوابة الرئيسية النظيفة
+            new MainFrame(); 
             dispose();
         }
     }
