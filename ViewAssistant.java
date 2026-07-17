@@ -12,7 +12,7 @@ public class ViewAssistant extends JFrame {
         setTitle("Donation Management System - View Donors");
         setLayout(new BorderLayout());
 
-        // تصميم الأعمدة للجدول
+       
         String[] columns = {"ID", "Donor Name", "Password", "Email", "Contact No"};
         DefaultTableModel model = new DefaultTableModel(columns, 0);
 
