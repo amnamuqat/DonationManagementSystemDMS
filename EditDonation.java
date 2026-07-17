@@ -92,7 +92,7 @@ public class EditDonation extends JFrame implements ActionListener, KeyListener 
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }
-//رجوع
+
     private void calculateTotal() {
         try {
             double amount = Double.parseDouble(amountField.getText().trim());
