@@ -33,7 +33,7 @@ public class AddDonation extends JFrame implements ActionListener, KeyListener {
     private static final Pattern LEGACY_LINE = Pattern.compile(
             "^(.+?),(.+?),(\\d+(?:\\.\\d+)?),(\\d+),(\\d+(?:\\.\\d+)?),(.+),([^,]*),([^,]*)$");
 
-    /** تحميل التبرعات من الملف عند تشغيل البرنامج حتى تبقى البيانات بعد الإغلاق */
+ 
     public static void loadFromFile() {
         if (loadedFromFile) {
             return;
