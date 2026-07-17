@@ -9,7 +9,7 @@ public class AdminLogin extends JFrame implements ActionListener {
     private JLabel userLabel = new JLabel("Username:");
     private JLabel passLabel = new JLabel("Password:");
     private JTextField userField = new JTextField(15);
-    private JPasswordField passField = new JPasswordField(15); // استخدام حقل آمن لكلمات المرور
+    private JPasswordField passField = new JPasswordField(15); 
     private JButton loginBtn = new JButton("Login");
     private JButton backBtn = new JButton("Back");
     private Container c;
@@ -53,18 +53,18 @@ public class AdminLogin extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == loginBtn) {
             String username = userField.getText().trim();
-            // جلب كلمة المرور وتحويلها من مصفوفة رموز إلى نص String
+            
             String password = new String(passField.getPassword()).trim(); 
             
             if (username.equals("admin") && password.equals("admin123")) {
-                new AdminSection(); // استدعاء الاسم النظيف للوحة تحكم الآدمن
+                new AdminSection(); 
                 dispose();
             } else {
                 JOptionPane.showMessageDialog(null, "Username or Password mismatch");
             }
         }
         if (e.getSource() == backBtn) {
-            new MainFrame(); // استدعاء واجهة البوابة الرئيسية النظيفة
+            new MainFrame(); 
             dispose();
         }
     }
