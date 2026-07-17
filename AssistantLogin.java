@@ -9,7 +9,7 @@ public class AssistantLogin extends JFrame implements ActionListener {
     private JLabel label_2 = new JLabel("Name:");
     private JLabel label_3 = new JLabel("Password:");
     private JTextField input_1 = new JTextField(15);
-    private JPasswordField input_2 = new JPasswordField(15); // تم ترقيته لإخفاء كلمة المرور برمجياً
+    private JPasswordField input_2 = new JPasswordField(15); 
     private JButton button = new JButton("Login");
     private JButton button1 = new JButton("Back");
     private Container c;
@@ -40,7 +40,7 @@ public class AssistantLogin extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == button) {
             String enteredName = input_1.getText().trim();
-            String enteredPassword = new String(input_2.getPassword()).trim(); // قراءة الباسورد من الـ JPasswordField
+            String enteredPassword = new String(input_2.getPassword()).trim();
 
             if (enteredName.isEmpty() || enteredPassword.isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Please fill all fields!");
@@ -48,18 +48,16 @@ public class AssistantLogin extends JFrame implements ActionListener {
             }
 
             boolean found = false;
-            // استخدام اسم الكلاس المعدّل Assistant واستدعاء الداتا من AddAssistant النظيف
-            for (Assistant donor : AddAssistant.data) {
-                // تطبيق الـ Encapsulation باستخدام ميثودز الـ Getters المستدعاة من كلاس البيانات
-                if (enteredName.equals(donor.getName()) && enteredPassword.equals(donor.getPassword())) {
+                        for (Assistant donor : AddAssistant.data) {
+                    if (enteredName.equals(donor.getName()) && enteredPassword.equals(donor.getPassword())) {
                     found = true;
                     break;
                 }
             }
 
-            // خيار الدخول الافتراضي أو وجود الحساب المكتشف
+           
             if (found || (enteredName.equals("donor") && enteredPassword.equals("donor123"))) {
-                new AssistantSection(); // استدعاء اسم القسم الجديد والنظيف بدون شرطات
+                new AssistantSection(); 
                 dispose();
             } else {
                 JOptionPane.showMessageDialog(null, "Donor not found!", "Login Error", JOptionPane.ERROR_MESSAGE);
@@ -67,7 +65,7 @@ public class AssistantLogin extends JFrame implements ActionListener {
         }
         
         if (e.getSource() == button1) {
-            new MainFrame(); // استدعاء الماين فريم بالاسم النظيف بدون شرطات
+            new MainFrame(); 
             dispose();
         }
     }
