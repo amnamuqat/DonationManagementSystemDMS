@@ -36,10 +36,8 @@ public class AssistantSection extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        // استدعاء كلاس الإضافة الجديد بدون شرطات
+       
         if (e.getSource() == button_1) { new AddDonation(); dispose(); }
-        
-        // بقية الواجهات استدعيها بحسب أسمائها الحالية، وعند تعديلها لاحقاً سنقوم بإزالة الشرطات منها هنا أيضاً
         if (e.getSource() == button_2) { new ViewDonation(); dispose(); }
         if (e.getSource() == button_3) { new EditDonation(); dispose(); }
         if (e.getSource() == button_4) { new DeleteDonation(); dispose(); }
